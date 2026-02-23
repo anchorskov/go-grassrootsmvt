@@ -20,3 +20,8 @@
 
 ## Documentation
 - Update docs when routes, data model, or architecture change
+## Local development and production database workflow
+- Default: develop and test against local D1 first.
+- Apply migrations locally: npx wrangler d1 migrations apply go_db --local
+- Apply migrations to production: npx wrangler d1 migrations apply go_db
+- UI and API must work in both environments without code changes.
