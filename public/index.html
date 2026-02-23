@@ -1,32 +1,30 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Hello, World!</title>
-	</head>
-	<body>
-		<h1 id="heading"></h1>
-		<p>This page comes from a static asset stored at `public/index.html` as configured in `wrangler.jsonc`.</p>
-		<button id="button" type="button">Fetch a random UUID</button>
-		<output id="random" for="button"></output>
-		<script>
-			fetch('/message')
-				.then((resp) => resp.text())
-				.then((text) => {
-					const h1 = document.getElementById('heading');
-					h1.textContent = text;
-				});
-
-			const button = document.getElementById("button");
-			button.addEventListener("click", () => {
-				fetch('/random')
-					.then((resp) => resp.text())
-					.then((text) => {
-						const random = document.getElementById('random');
-						random.textContent = text;
-					});
-			});
-		</script>
-	</body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>go.grassrootsmvt.org</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin:0; padding:16px; line-height:1.35; }
+    .wrap { max-width: 820px; margin: 0 auto; }
+    h1 { font-size: 26px; margin: 0 0 8px; }
+    p { margin: 10px 0; }
+    a.btn {
+      display:inline-block; text-decoration:none; padding:12px 14px;
+      border-radius:10px; border:1px solid #ddd; color:#111; background:#fff; font-weight:700;
+      margin-top: 10px;
+    }
+    a.btn:hover { background:#f6f6f6; }
+    .small { font-size: 14px; color: #444; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>go.grassrootsmvt.org</h1>
+    <p><strong>No one joins and gets lost.</strong> Everyone gets a mission.</p>
+    <p class="small">Five minutes from now, because of one choice, this work moves forward.</p>
+    <p><a class="btn" href="/roles">Start: Choose your role</a></p>
+    <p><a class="btn" href="/help">Need support</a></p>
+  </div>
+</body>
 </html>
