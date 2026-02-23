@@ -25,3 +25,7 @@
 - Apply migrations locally: npx wrangler d1 migrations apply go_db --local
 - Apply migrations to production: npx wrangler d1 migrations apply go_db
 - UI and API must work in both environments without code changes.
+
+## Access model
+- Open browse + gated writes: public GET routes stay open; `/log` and write APIs require auth.
+- Passkeys-first auth is the default path for user sign-in and account bootstrap.

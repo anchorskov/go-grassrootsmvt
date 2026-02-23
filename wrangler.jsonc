@@ -42,7 +42,14 @@
 	 * Note: Use secrets to store sensitive data.
 	 * https://developers.cloudflare.com/workers/configuration/secrets/
 	 */
-	// "vars": {  "MY_VARIABLE": "production_value" }
+	"vars": {
+		"EMAIL_PROVIDER": "none",
+		"ADMIN_NOTIFY_EMAIL": "",
+		"WEBAUTHN_RP_NAME": "go.grassrootsmvt.org",
+		"WEBAUTHN_RP_ID": "go.grassrootsmvt.org",
+		"WEBAUTHN_ORIGIN": "https://go.grassrootsmvt.org",
+		"ADMIN_KEY": "set-via-secret-not-here"
+	},
 	/**
 	 * Service Bindings (communicate between multiple Workers)
 	 * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
